@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project( RFS-VISUAL-ODOMETRY )
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
+find_package( OpenCV REQUIRED )
+add_executable( rfs-odom src/main.cpp )
+target_link_libraries( rfs-odom ${OpenCV_LIBS} )
